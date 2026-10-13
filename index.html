@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Tamanna — Creative Portfolio</title>
+    <link rel="stylesheet" href="./style.css">
+
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html,
+        body {
+            width: 100%;
+            min-height: 100%;
+            margin: 0;
+            padding: 0;
+
+            overflow-x: hidden;
+            overflow-y: auto;
+
+            background: #075b63;
+        }
+
+
+        /* =========================
+           MAIN PORTFOLIO — SLIDE 1
+        ========================= */
+
+        .portfolio {
+
+            position: relative;
+
+            width: 100%;
+            height: 100vh;
+            min-height: 100vh;
+
+            overflow: hidden;
+        }
+
+
+        /* =========================
+           BACKGROUND
+        ========================= */
+.portfolio-base {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    transform: translate(-50%, -50%);
+
+    z-index: 1;
+
+    pointer-events: none;
+    user-select: none;
+}
+        /* =========================
+           3D CHARACTER
+        ========================= */
+
+        #character-container {
+
+            position: absolute;
+
+            left: 50%;
+            top: 50%;
+
+            width: 42vw;
+            height: 92vh;
+
+            transform: translate(-50%, -50%);
+
+            z-index: 10;
+
+            pointer-events: auto;
+        }
+
+
+        #character-canvas {
+
+            width: 100%;
+            height: 100%;
+
+            display: block;
+        }
+
+
+                     MOBILE
+        ========================= */
+
+@media (max-width: 768px) {
+
+    #character-container {
+
+        width: 75vw;
+        height: 75vh;
+    }
+
+
+@media (max-width: 768px) {
+  .about-slide {
+    padding: 45px 6%;
+  }
+
+  .about-top,
+  .about-bottom {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .about-photo {
+    max-width: 260px;
+  }
+
+  .about-heading {
+    margin-bottom: 30px;
+  }
+}              </style>
+
+</head>
+
+
+<body>
+
+
+
+
+    <!-- ==================================================
+         SLIDE 1 — 3D HERO
+    ================================================== -->
+
+    <main class="portfolio">
+
+
+        <!-- BACKGROUND -->
+
+        <img
+            src="./base.png"
+            class="portfolio-base"
+            alt=""
+        >
+
+
+        <!-- 3D GIRL -->
+
+        <div id="character-container">
+
+            <canvas id="character-canvas"></canvas>
+
+        </div>
+
+
+    </main>
+
+<section class="about-slide">
+  <h1 class="about-heading">ABOUT ME<span>.</span></h1>
+
+  <div class="about-top">
+    <img
+      src="./profile%20photo.png"
+      alt="Tamanna's profile photo"
+      class="about-photo"
+    >
+
+    <div class="about-intro">
+      <h2>Hi, I'm Tamanna.</h2>
+      <p>
+        I'm a Graphic Designer and Visual Creative. I enjoy transforming
+        ideas into meaningful visual experiences through design, typography,
+        branding and storytelling. My creative approach combines aesthetics
+        with purpose, creating visuals that communicate and connect.
+      </p>
+    </div>
+  </div>
+
+  <div class="about-bottom">
+    <div>
+      <h3>EDUCATION</h3>
+
+      <div class="education-item">
+        <h4>BA in Journalism And Mass Communication</h4>
+        <p>College: The Bhawanipur Education Society College </p>
+        <p>Passing Year: 2027 </p>
+      </div>
+
+      <div class="education-item">
+        <h4>School</h4>
+        <p>School:Mahadevi Birla World Academy </p>
+        <p>Passing Year: 2024 </p>
+      </div>
+    </div>
+
+    <div>
+      <h3>EXPERTISE</h3>
+
+      <div class="expertise-list">
+        <span>Graphic Design</span>
+        <span>Branding & Visual Identity</span>
+        <span>Editorial Design</span>
+        <span>Social Media Design</span>
+        <span>Audio Editing</span>
+        <span>AI-Assisted Creative</span>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- SELECTED WORK -->
+<section class="projects-section" id="projects">
+
+  <div class="projects-heading">
+    <p class="section-label">MY CREATIVE WORK</p>
+    <h1>Selected <span>Work</span></h1>
+    <p class="projects-intro">
+      A collection of my personal and college projects.
+    </p>
+  </div>
+
+  <!-- COLLEGE WORKS -->
+  <h2 class="work-category">College Works</h2>
+
+  <div class="projects-grid">
+
+    <!-- NEWS REEL CARD -->
+    <div class="news-card" onclick="openNewsVideo()">
+      <div class="news-thumbnail">
+        <video muted playsinline preload="metadata">
+          <source src="./final%20news%20reel.mp4" type="video/mp4">
+        </video>
+        <div class="play-button">▶</div>
+        <span class="news-tag">COLLEGE PROJECT</span>
+      </div>
+
+      <div class="news-card-info">
+        <p>VIDEO PRODUCTION</p>
+        <h2>News Reel <span>↗</span></h2>
+        <small>Script Writing · Editing · Anchoring</small>
+      </div>
+    </div>
+
+    <!-- CITY MIRROR PDF CARD -->
+    <a href="./group%204_city%20mirror_.pdf"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="pdf-card">
+      <div class="pdf-icon">PDF</div>
+      <div class="pdf-info">
+        <p>COLLEGE PROJECT</p>
+        <h2>City Mirror ↗</h2>
+        <small>Group 4 · View Project</small>
+      </div>
+    </a>
+
+    <!-- PHOTO FEATURE PDF CARD -->
+    <a href="./PHOTOFEATURE.PDF"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="pdf-card">
+      <div class="pdf-icon">PDF</div>
+      <div class="pdf-info">
+        <p>COLLEGE PROJECT</p>
+        <h2>Photo Feature ↗</h2>
+        <small>View Project</small>
+      </div>
+    </a>
+
+    <!-- RADIO TALK AUDIO CARD -->
+    <div class="pdf-card">
+      <div class="pdf-icon">▶</div>
+      <div class="pdf-info">
+        <p>COLLEGE PROJECT</p>
+        <h2>Radio Talk</h2>
+        <small>Audio Project</small>
+        <audio controls>
+          <source src="./RadioTalk.mp4" type="audio/mp4">
+        </audio>
+      </div>
+    </div>
+<!-- ORATEUR PDF CARD -->
+<a href="./ORATEUR-Volume-IV-2024.pdf"
+   target="_blank"
+   rel="noopener noreferrer"
+   class="pdf-card">
+  <div class="pdf-icon">PDF</div>
+  <div class="pdf-info">
+    <p>COLLEGE PROJECT</p>
+    <h2>Orateur — Volume IV ↗</h2>
+    <small>2024 · View Project</small>
+  </div>
+</a>
+
+  </div>
+
+<!-- PERSONAL PROJECTS -->
+<h2 class="work-category">Personal Projects</h2>
+
+<div class="projects-grid personal-projects">
+  <!-- Website 1 -->
+  <a href="https://world-of-illustration.github.io/udita-s-Birthday-Gift-/"
+     target="_blank"
+     rel="noopener noreferrer"
+     class="pdf-card">
+    <div class="pdf-icon">WEB</div>
+    <div class="pdf-info">
+      <p>PERSONAL PROJECT</p>
+      <h2>Website 1 ↗</h2>
+      <small>View Website</small>
+    </div>
+  </a>
+
+  <!-- Website 2 -->
+  <a href="https://world-of-illustration.github.io/justforyou/"
+     target="_blank"
+     rel="noopener noreferrer"
+     class="pdf-card">
+    <div class="pdf-icon">WEB</div>
+    <div class="pdf-info">
+      <p>PERSONAL PROJECT</p>
+      <h2>Website 2 ↗</h2>
+      <small>View Website</small>
+    </div>
+  </a>
+<!-- AI ADVERTISING VIDEO CARD -->
+<div class="news-card" onclick="openAIVideo()">
+  <div class="news-thumbnail">
+
+
+    <video muted playsinline preload="metadata">
+      <source src="./AI%20Advertising%20Video.mp4" type="video/mp4">
+    </video>
+
+    <div class="play-button">▶</div>
+
+    <span class="news-tag">COLLEGE PROJECT</span>
+
+  </div>
+
+  <div class="news-card-info">
+    <p>AI ADVERTISING</p>
+    <h2>AI Advertising Video ↗</h2>
+    <small>View Project</small>
+  </div>
+</div>
+
+<!-- GLOW THEORY SOCIAL MEDIA CAMPAIGN -->
+<a href="./glow-theory.pdf"
+   target="_blank"
+   rel="noopener noreferrer"
+   class="pdf-card">
+
+  <div class="pdf-icon">PDF</div>
+
+  <div class="pdf-info">
+    <p>PERSONAL PROJECT</p>
+    <h2>GLOW THEORY ↗</h2>
+    <small>Social Media Campaign · View Project</small>
+  </div>
+
+</a>
+
+<div class="pdf-card">
+  <div class="pdf-icon">PDF</div>
+  <h3>Frames of Us</h3>
+  <p>Art Exhibition Poster Design</p>
+<a href="./frames of us.pdf" target="_blank">
+  View Project ↗
+  </a>
+</div>
+</section>
+
+<!-- VIDEO POPUP -->
+<div class="video-modal" id="newsModal">
+  <button class="close-video" onclick="closeNewsVideo()">×</button>
+  <video id="newsPlayer" controls playsinline>
+    <source src="./final%20news%20reel.mp4" type="video/mp4">
+  </video>
+</div> 
+
+<!-- EXPERIENCE & ACHIEVEMENTS -->
+<section id="experience" class="experience-section">
+
+  <div class="section-heading">
+    <h2>Experience & Achievements</h2>
+    <p>My professional journey and learning experiences.</p>
+  </div>
+
+  <div class="experience-container">
+
+    <div class="experience-card">
+      <span class="experience-duration">2 Years</span>
+      <h3>Freelance Graphic Designer</h3>
+      <p>
+        Creating visual designs and graphic content for different projects.
+      </p>
+    </div>
+
+    <div class="experience-card">
+      <span class="experience-duration">2 Months</span>
+      <h3>Social Media Management Intern</h3>
+      <h4>Social Locha</h4>
+      <p>
+        Gained practical experience in social media management and content creation.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- CERTIFICATES SECTION -->
+<section id="certificates" class="certificates-section">
+
+  <div class="section-heading">
+    <h2>Certificates</h2>
+    <p>My learning and achievements.</p>
+  </div>
+
+  <div class="certificates-grid">
+    <div class="certificate-card">
+
+
+<div class="certificate-preview">
+  <iframe
+    src="./SL%20X%20Tamanna%20Internship%20certificate.pdf"
+    title="Social Locha Internship Certificate">
+  </iframe>
+</div>
+
+
+
+      <h3>Graphic Design Internship</h3>
+      <p>Social Locha · 2025</p>
+
+      <a href="SL X Tamanna Internship certificate"
+         target="_blank"
+         rel="noopener noreferrer">
+        VIEW CERTIFICATE ↗
+      </a>
+
+    </div>
+  </div>
+
+</section>
+<!-- CONTACT SECTION -->
+<section id="contact" class="contact-section">
+
+  <div class="contact-content">
+    <p class="contact-label">LET'S CONNECT</p>
+
+    <h2>Looking for a<br>Creative Mind?</h2>
+
+    <p class="contact-description">
+      I'm open to internship and job opportunities in Graphic Design,
+      Mass Communication, and Journalism. I'm excited to learn,
+      create, and contribute to meaningful work.
+    </p>
+
+    <a href="tamannabaid351@gmail.com" class="contact-button">
+      LET'S CONNECT ↗
+    </a>
+  </div>
+
+  <div class="contact-footer">
+    <span>© 2026 Tamanna</span>
+    <span>Designed with creativity.</span>
+  </div>
+
+</section>
+<!-- ==================================================
+         THREE.JS IMPORT MAP
+    ================================================== -->
+
+    <script type="importmap">
+
+    {
+        "imports": {
+
+            "three":
+            "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
+
+            "three/addons/":
+            "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"
+
+        }
+    }
+
+    </script>
+
+
+
+    <!-- ==================================================
+         THREE.JS 3D SCRIPT
+    ================================================== -->
+
+    <script type="module">
+
+        import * as THREE from "three";
+
+        import {
+            GLTFLoader
+        } from "three/addons/loaders/GLTFLoader.js";
+
+
+
+        /* =========================
+           ELEMENTS
+        ========================= */
+
+        const container =
+            document.getElementById(
+                "character-container"
+            );
+
+
+        const canvas =
+            document.getElementById(
+                "character-canvas"
+            );
+
+
+
+        /* =========================
+           SCENE
+        ========================= */
+
+        const scene =
+            new THREE.Scene();
+
+
+
+        /* =========================
+           CAMERA
+        ========================= */
+
+        const camera =
+            new THREE.PerspectiveCamera(
+                35,
+                container.clientWidth /
+                container.clientHeight,
+                0.01,
+                1000
+            );
+
+
+        camera.position.set(
+            0,
+            0,
+            9.5
+        );
+
+
+
+        /* =========================
+           RENDERER
+        ========================= */
+
+        const renderer =
+            new THREE.WebGLRenderer({
+
+                canvas: canvas,
+
+                alpha: true,
+
+                antialias: true
+
+            });
+
+
+        renderer.setPixelRatio(
+            Math.min(
+                window.devicePixelRatio,
+                2
+            )
+        );
+
+
+        renderer.setSize(
+            container.clientWidth,
+            container.clientHeight
+        );
+
+
+        renderer.setClearColor(
+            0x000000,
+            0
+        );
+
+
+        renderer.outputColorSpace =
+            THREE.SRGBColorSpace;
+
+
+
+        /* =========================
+           LIGHTING
+        ========================= */
+
+        const ambientLight =
+            new THREE.AmbientLight(
+                0xffffff,
+                3
+            );
+
+        scene.add(
+            ambientLight
+        );
+
+
+        const mainLight =
+            new THREE.DirectionalLight(
+                0xffffff,
+                4
+            );
+
+        mainLight.position.set(
+            4,
+            6,
+            8
+        );
+
+        scene.add(
+            mainLight
+        );
+
+
+        const fillLight =
+            new THREE.DirectionalLight(
+                0xffffff,
+                2
+            );
+
+        fillLight.position.set(
+            -5,
+            3,
+            5
+        );
+
+        scene.add(
+            fillLight
+        );
+
+
+
+        /* =========================
+           CHARACTER
+        ========================= */
+
+        let character = null;
+
+
+
+        /* =========================
+           LOAD GLB
+        ========================= */
+
+        const loader =
+            new GLTFLoader();
+
+
+        loader.load(
+
+            "./character.glb",
+
+
+            function (gltf) {
+
+                character =
+                    gltf.scene;
+
+
+                scene.add(
+                    character
+                );
+
+
+                /* FIND MODEL SIZE */
+
+                const box =
+                    new THREE.Box3()
+                    .setFromObject(
+                        character
+                    );
+
+
+                const size =
+                    box.getSize(
+                        new THREE.Vector3()
+                    );
+
+
+                const center =
+                    box.getCenter(
+                        new THREE.Vector3()
+                    );
+
+
+                /* CENTER MODEL */
+
+                character.position.x =
+                    -center.x;
+
+                character.position.y =
+                    -center.y;
+
+                character.position.z =
+                    -center.z;
+
+
+                /* AUTOMATIC SCALE */
+
+                const maxSize =
+                    Math.max(
+                        size.x,
+                        size.y,
+                        size.z
+                    );
+
+
+                const desiredHeight = 4.8;
+
+
+                const scale =
+                    desiredHeight /
+                    maxSize;
+
+
+                character.scale.setScalar(
+                    scale
+                );
+
+
+                /* FINAL POSITION */
+
+                character.position.y = 0;
+
+
+                camera.position.set(
+                    0,
+                    0,
+                    9.5
+                );
+
+
+                camera.lookAt(
+                    0,
+                    0,
+                    0
+                );
+
+
+                console.log(
+                    "3D CHARACTER LOADED"
+                );
+
+
+                console.log(
+                    "Original model size:",
+                    size
+                );
+
+            },
+
+
+            function (progress) {
+
+                if (progress.total > 0) {
+
+                    console.log(
+
+                        "Loading:",
+
+                        Math.round(
+                            progress.loaded /
+                            progress.total *
+                            100
+                        ) + "%"
+
+                    );
+
+                }
+
+            },
+
+
+            function (error) {
+
+                console.error(
+                    "CHARACTER ERROR:",
+                    error
+                );
+
+            }
+
+        );
+
+
+
+        /* =========================
+           MOUSE ROTATION
+        ========================= */
+
+        let targetRotationY = 0;
+
+        let currentRotationY = 0;
+
+        let targetRotationX = 0;
+
+        let currentRotationX = 0;
+
+
+        document.addEventListener(
+            "mousemove",
+            function (event) {
+
+                const mouseX =
+                    event.clientX /
+                    window.innerWidth;
+
+
+                const mouseY =
+                    event.clientY /
+                    window.innerHeight;
+
+
+                targetRotationY =
+                    (
+                        mouseX - 0.5
+                    )
+                    *
+                    Math.PI
+                    *
+                    2;
+
+
+                targetRotationX =
+                    (
+                        mouseY - 0.5
+                    )
+                    *
+                    0.25;
+
+            }
+        );
+
+
+
+        /* =========================
+           ANIMATION
+        ========================= */
+
+        function animate() {
+
+            requestAnimationFrame(
+                animate
+            );
+
+
+            if (character) {
+
+                currentRotationY +=
+
+                    (
+                        targetRotationY -
+                        currentRotationY
+                    )
+                    *
+                    0.08;
+
+
+                currentRotationX +=
+
+                    (
+                        targetRotationX -
+                        currentRotationX
+                    )
+                    *
+                    0.08;
+
+
+                character.rotation.y =
+                    currentRotationY;
+
+
+                character.rotation.x =
+                    currentRotationX;
+
+            }
+
+
+            renderer.render(
+                scene,
+                camera
+            );
+
+        }
+
+
+        animate();
+
+
+
+        /* =========================
+           WINDOW RESIZE
+        ========================= */
+
+        window.addEventListener(
+            "resize",
+            function () {
+
+                camera.aspect =
+
+                    container.clientWidth /
+                    container.clientHeight;
+
+
+                camera.updateProjectionMatrix();
+
+
+                renderer.setSize(
+
+                    container.clientWidth,
+
+                    container.clientHeight
+
+                );
+
+            }
+        );
+
+    </script>
+<script>
+  function openNewsVideo() {
+    const modal = document.getElementById("newsModal");
+    const player = document.getElementById("newsPlayer");
+
+    player.src = "./final%20news%20reel.mp4";
+
+    modal.classList.add("active");
+    player.currentTime = 0;
+    player.play();
+  }
+
+  function openAIVideo() {
+    const modal = document.getElementById("newsModal");
+    const player = document.getElementById("newsPlayer");
+
+    player.src = "./AI%20Advertising%20Video.mp4";
+
+    modal.classList.add("active");
+    player.currentTime = 0;
+    player.play();
+  }
+
+  function closeNewsVideo() {
+    const modal = document.getElementById("newsModal");
+    const player = document.getElementById("newsPlayer");
+
+    player.pause();
+    player.currentTime = 0;
+    modal.classList.remove("active");
+  }
+</script>
