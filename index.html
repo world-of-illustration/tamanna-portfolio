@@ -822,49 +822,19 @@ f5<!DOCTYPE html>
            MOUSE ROTATION
         ========================= */
 
-        let targetRotationY = 0;
+    
+let targetRotationY = 0;
+let currentRotationY = 0;
+let targetRotationX = 0;
+let currentRotationX = 0;
 
-        let currentRotationY = 0;
+document.addEventListener("pointermove", function (event) {
+    const mouseX = event.clientX / window.innerWidth;
+    const mouseY = event.clientY / window.innerHeight;
 
-        let targetRotationX = 0;
-
-        let currentRotationX = 0;
-
-
-        document.addEventListener(
-            "mousemove",
-            function (event) {
-
-                const mouseX =
-                    event.clientX /
-                    window.innerWidth;
-
-
-                const mouseY =
-                    event.clientY /
-                    window.innerHeight;
-
-
-                targetRotationY =
-                    (
-                        mouseX - 0.5
-                    )
-                    *
-                    Math.PI
-                    *
-                    2;
-
-
-                targetRotationX =
-                    (
-                        mouseY - 0.5
-                    )
-                    *
-                    0.25;
-
-            }
-        );
-
+    targetRotationY = (mouseX - 0.5) * Math.PI * 2;
+    targetRotationX = (mouseY - 0.5) * 0.25;
+});
 
 
         /* =========================
